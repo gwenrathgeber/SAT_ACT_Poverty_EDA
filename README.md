@@ -70,7 +70,7 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted by the beginning of class on June 14.**
+**Materials must be submitted by the beginning of class on September 20.**
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
