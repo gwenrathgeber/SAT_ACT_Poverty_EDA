@@ -23,16 +23,19 @@ Generally speaking, you will be asked to come up with a data science problem. He
 
 #### Provided Data
 
-For this project, you'll have two provided datasets:
+For this project, you'll have four provided datasets:
 
 - [2017 SAT Scores](./data/sat_2017.csv)
 - [2017 ACT Scores](./data/act_2017.csv)
+- [2018 SAT Scores](./data/sat_2018.csv)
+- [2018 ACT Scores](./data/act_2018.csv)
 
 These data give average SAT and ACT scores by state, as well as participation rates, for the graduating class of 2017.
 
 You can see the source for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
 
 #### Additional Data
+(_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
 
 2018 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) .
 
@@ -60,7 +63,7 @@ Future projects will require you to decide on the entire structure of your techn
 
 ### Style Guide and Suggested Resources
 
-[Tim Dwyer](https://www.linkedin.com/in/jtimdwyer/) (former DSI student and TA) put together [this style guide](https://git.generalassemb.ly/DSI-US-8/style_guide). Some recommendations are geared toward future projects (which will include modeling and span multiple notebooks), but generally these are great recommendations.
+[Tim Dwyer](https://www.linkedin.com/in/jtimdwyer/) (former DSI student and TA) put together [this style guide](https://git.generalassemb.ly/DSI-US-9/style_guide). Some recommendations are geared toward future projects (which will include modeling and span multiple notebooks), but generally these are great recommendations.
 
 Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
 
@@ -70,7 +73,7 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted by the beginning of class on June 14.**
+**Materials must be submitted by the beginning of class on September 20.**
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
