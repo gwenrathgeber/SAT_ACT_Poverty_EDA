@@ -34,7 +34,7 @@ For this project, you'll have six provided datasets:
 
 These data give average SAT and ACT scores by state, as well as participation rates for the classes of 2017, 2018, and 2019.
 
-You can see the source for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
+You can see the sources for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/) and [here](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
 
 #### Additional Data
 (_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
