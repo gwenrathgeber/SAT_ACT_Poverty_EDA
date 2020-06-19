@@ -23,21 +23,23 @@ Generally speaking, you will be asked to come up with a data science problem. He
 
 #### Provided Data
 
-For this project, you'll have four provided datasets:
+For this project, you'll have six provided datasets:
 
 - [2017 SAT Scores](./data/sat_2017.csv)
 - [2017 ACT Scores](./data/act_2017.csv)
 - [2018 SAT Scores](./data/sat_2018.csv)
 - [2018 ACT Scores](./data/act_2018.csv)
+- [2019 SAT Scores](./data/sat_2019.csv)
+- [2019 ACT Scores](./data/act_2019.csv)
 
-These data give average SAT and ACT scores by state, as well as participation rates, for the graduating class of 2017.
+These data give average SAT and ACT scores by state, as well as participation rates for the classes of 2017, 2018, and 2019.
 
 You can see the source for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
 
 #### Additional Data
 (_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
 
-2018 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) .
+2018 and 2019 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) and 2019 data can be found [here](https://www.act.org/content/dam/act/secured/documents/cccr-2019/Average-Scores-by-State.pdf).
 
 **This data has been compiled into CSV files which are also included in the *data* directory of this repo**
 
@@ -73,7 +75,7 @@ Here's a link on [how to give a good lightning talk](https://www.semrush.com/blo
 
 ### Submission
 
-**Materials must be submitted by the beginning of class on December 20.**
+**Materials must be submitted by the beginning of class on June 26.**
 
 Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
@@ -114,7 +116,7 @@ Your local instructor will evaluate your project (for the most part) using the f
 | **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
 | **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
 | **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
-    
+
 **Project Organization**
 - Are modules imported correctly (using appropriate aliases)?
 - Are data imported/saved using relative paths?
@@ -159,7 +161,7 @@ Your local instructor will evaluate your project (for the most part) using the f
 **Research and Conceptual Understanding**
 - Were useful insights gathered from outside sources?
 - Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics? 
+- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
 
 **Presentation**
 - Is the problem statement clearly presented?
@@ -172,7 +174,7 @@ Your local instructor will evaluate your project (for the most part) using the f
 - Are appropriate visualizations generated for the intended audience?
 - Are visualizations necessary and useful for supporting conclusions/explaining findings?
 
-In order to pass the project, students must earn a minimum score of 1 for each category. 
+In order to pass the project, students must earn a minimum score of 1 for each category.
 - Earning below a 1 in one or more of the above categories would result in a failing project.
 - While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
 
