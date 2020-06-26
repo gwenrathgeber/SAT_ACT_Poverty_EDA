@@ -1,183 +1,89 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Standardized Testing, Statistical Summaries and Inference
 
-### Overview
+## Gwen Rathgeber, DSI-12-The Matt
 
-Our first module in DSI covers:
-- basic statistics (distributions, confidence intervals, hypothesis testing)
-- many Python programming concepts
-- programmatically interacting with files and directories
-- visualizations
-- EDA
-- working with Jupyter notebooks for development and reporting
+## Instructor: Mahdi Shadkam-Farrokhi
 
-You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practice and demonstrate these skills.
+## Problem Statement
 
-For our first project, we're going to take a look at aggregate SAT and ACT scores and participation rates from each state in the United States. We'll seek to identify trends in the data and combine our data analysis with outside research to identify likely factors influencing participation rates and scores in various states.
+We want to understand how poverty rates relate to state SAT and ACT scores by integrating [census data](https://www2.census.gov/programs-surveys/demo/tables/p60/266/state.xls) with scores.
 
-Generally speaking, you will be asked to come up with a data science problem. Here's a specific prompt that should help you craft this statement:
-> The new format for the SAT was released in March 2016. As an employee of the College Board - the organization that administers the SAT - you are a part of a team that tracks statewide participation and recommends where money is best spent to improve SAT participation rates. Your presentation and report should be geared toward **non-technical** executives with the College Board and you will use the provided data and outside research to make recommendations about how the College Board might work to increase the participation rate in a **state of your choice**.
+As it's well established that [family income is a strong predictor of test scores](https://www.washingtonpost.com/news/wonk/wp/2014/03/05/these-four-charts-show-how-the-sat-favors-the-rich-educated-families/), it is reasonable to suspect that in states with high participation on a given test, average poverty level will be correlated with state average test scores.
 
----
+We wish to determine if a relationship between state test scores and poverty levels exists through exploratory data analysis.
 
-### Datasets
+## Executive Summary
 
-#### Provided Data
+To investigate the question of poverty as it relates to standardized test scores, we gathered summary statistics on the data, investigated trends, then created visualizations which helped to understand the data and communicate findings.
 
-For this project, you'll have six provided datasets:
+Cleaning the sets followed these steps:
+- Isolating input errors and replacing with correct values, then sourcing accurate replacements
+- Adjusting data types where necessary due to formatting or input errors
+- Dropping a handful of rows with extraneous or missing values
+- Merging all 5 source tables into our final, combined table
 
-- [2017 SAT Scores](./data/sat_2017.csv)
-- [2017 ACT Scores](./data/act_2017.csv)
-- [2018 SAT Scores](./data/sat_2018.csv)
-- [2018 ACT Scores](./data/act_2018.csv)
-- [2019 SAT Scores](./data/sat_2019.csv)
-- [2019 ACT Scores](./data/act_2019.csv)
+We then proceeded with exploratory data analysis. This proceeded as follows:
+- Explored minimum and maximum values in our columns
+- Identified states with large changes in year-over-year participation rates
+- Explored the highest and lowest states based on the sum of both participation rates for each year
 
-These data give average SAT and ACT scores by state, as well as participation rates for the classes of 2017, 2018, and 2019.
+Finally, we created visualizations. These were split into two parts:
+- First, several types of plots helped us better understand our data
+    - A heatmap of correlations allowed us to explore the relationships between different columns
+    - Histograms of our columns allowed us to explore the internal distributions of each variable
+    - Boxplots of all columns further visualized the spread of each variable
+    - Scatterplots began relating specific variables to each other in tangible patterns
+    - Finally, combinations of masks and scatterplots allowed us to isolate features which previous analysis had shown were confounding the relationship between poverty and test scores.
+    - We then examine Ohio, the only state which had above-average test scores in the presence of high poverty and high participation rates for the test. By going deeper into the 
+   
+We conclude that there is a meaningful relationship between state poverty levels and average SAT and ACT scores, and make several recommendations to address this effect.
 
-You can see the sources for the SAT data [here](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/) and [here](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent), and the source for the ACT data [here](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows). **Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
+## Conclusions and Recommendations
 
-#### Additional Data
-(_This data is for your reference only. It is not needed to complete the project. You are required to include all of the above csv data._)
+After extensively exploring this data, our key takeaways are as follows:
+- When investigating SAT and ACT scores at the state level, it is critical to compare 'apples to apples,' i.e. high-participation states to other high-participation states.
+- State-level SAT and ACT scores both have demonstrable connection to state-level poverty. This connection is still evident if we take a deeper dive into a state's demographic score breakdown and poverty distributions.
 
-2018 and 2019 state-by-state average results and participation for the SAT are available in PDF reports [here](https://reports.collegeboard.org/sat-suite-program-results/state-results). 2018 ACT state-by-state mean composite scores and participation rates are [here](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf) and 2019 data can be found [here](https://www.act.org/content/dam/act/secured/documents/cccr-2019/Average-Scores-by-State.pdf).
+SAT and ACT scores shouldn’t be considered objective without factoring in family wealth on an individual level, or poverty and race on an aggregate level.
 
-**This data has been compiled into CSV files which are also included in the *data* directory of this repo**
+We recommend cheaper access to test prep and equitable school funding to help equalize the US college admissions process, and that efforts should continue to eliminate unintentional biases in SAT and ACT questions and formats.
 
----
+We further recommend statistical modeling to put numbers to the patterns and effects we have been able to observe through visualizations.
 
-### Deliverables
+## Sources
 
-All of your projects will comprise of a written technical report and a presentation. As we continue in the course, your technical report will grow in complexity, but for this initial project it will comprise:
-- A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- A README markdown file the provides an introduction to and overview of your project.
-- Your presentation slideshow rendered as a .pdf file.
-**NOTE**: Your entire Github repository will be evaluated as your technical report. Make sure that your files and directories are named appropriately, that all necessary files are included, and that no unnecessary or incomplete files are included.
+- [Poverty Census Data](https://www.census.gov/data/tables/2019/demo/income-poverty/p60-266.html)
+- [SAT Suite of Annual Assessments Report](https://reports.collegeboard.org/pdf/2019-total-group-sat-suite-assessments-annual-report.pdf)
+- [Average ACT Scores by State Graduating Class 2018](http://www.act.org/content/dam/act/unsecured/documents/cccr2018/Average-Scores-by-State.pdf)
+- [Colorado juniors face new, revamped college exam in SAT after state dumps rival ACT](https://www.denverpost.com/2017/03/06/colorado-juniors-sat-college-exam/)
+- [Illinois Changed to the SAT in 2017: What You Need to Know](https://www.testive.com/illinois/)
+- [Historically low ACT scores ‘a red flag for our country’](https://www.daytondailynews.com/news/historically-low-act-scores-red-flag-for-our-country/djfx9Urp719WyEaMfykyxL/)
+- [Ohio Poverty Report 2019](https://www.development.ohio.gov/files/research/p7005.pdf)
+- [ACT Profile Report - Ohio, 2017](https://www.act.org/content/dam/act/unsecured/documents/cccr2017/P_36_369999_S_S_N00_ACT-GCPR_Ohio.pdf)
+- [These four charts show how the SAT favors rich, educated families](https://www.washingtonpost.com/news/wonk/wp/2014/03/05/these-four-charts-show-how-the-sat-favors-the-rich-educated-families/)
 
-For your first presentation, you'll be presenting to a **non-technical** audience. You should prepare a slideshow with appropriately scaled visuals to complement a compelling narrative. **Presentation duration will differ by market, so check with your local instructor.**
+## Data Dictionary
 
----
-
-### Technical Report Starter Code
-
-Future projects will require you to decide on the entire structure of your technical report. Here, we provide you with [starter code](./code/starter-code.ipynb) in a Jupyter notebook that will help to guide your data exploration and analysis. **If you choose to edit the core structure of this notebook, make sure you don't exclude any of the requested operations**.
-
----
-
-### Style Guide and Suggested Resources
-
-[Tim Dwyer](https://www.linkedin.com/in/jtimdwyer/) (former DSI student and TA) put together [this style guide](https://git.generalassemb.ly/DSI-US-10/style_guide). Some recommendations are geared toward future projects (which will include modeling and span multiple notebooks), but generally these are great recommendations.
-
-Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
-
-[Here's a great summary](https://towardsdatascience.com/storytelling-with-data-a-data-visualization-guide-for-business-professionals-97d50512b407) of the main points of the book _Storytelling with Data_, which I can't recommend enough. [Here's a blog post](http://www.storytellingwithdata.com/blog/2017/8/9/my-guiding-principles) by the author about his guiding principles for visualizations.
-
----
-
-### Submission
-
-**Materials must be submitted by the beginning of class on June 26.**
-
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis (renamed to describe your project)
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
-**Check with your local instructor for how they would like you to submit your repo for review.**
-
----
-
-### Presentation Structure
-
-- **Must be within time limit established by local instructor.**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to non-technical executives with the College Board (the organization that administers the SATs).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
-
----
-
-### Rubric
-Your local instructor will evaluate your project (for the most part) using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
-
-**Scores will be out of 21 points based on the 7 items in the rubric.** <br>
-*3 points per section*<br>
-
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
-
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
-
-**Clarity of Message**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the project?
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Does the student demonstrate mastery masking in Pandas?
-- Does the student demonstrate mastery sorting in Pandas?
-
-**Data Cleaning and EDA**
-- Does the student fix data entry issues?
-- Are data appropriately labeled?
-- Are data appropriately typed?
-- Are datasets combined correctly?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-
-**Visualizations**
-- Are the requested visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
-
-**Research and Conceptual Understanding**
-- Were useful insights gathered from outside sources?
-- Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
-
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
-
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
-
-### REMEMBER:
-
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|State|string|All|One of 50 States + Washington, D.C.| 
+|sat_partic_17|float|SAT '17|% of students participating in the SAT in 2017|
+|sat_read_write_17|float|SAT '17|SAT Reading and Writing Score, 2017|
+|sat_math_17|float|SAT '17|SAT Math Score, 2017|
+|sat_total_17|float|SAT '17|SAT Total Score, 2017|
+|act_partic_17|float|ACT '17|% of students participating in the ACT in 2017|
+|act_eng_17|float|ACT '17|ACT English Score, 2017|
+|act_math_17|float|ACT '17|ACT Math Score, 2017|
+|act_read_17|float|ACT '17|ACT Reading Score, 2017|
+|act_sci_17|float|ACT '17|ACT Science Score, 2017|
+|act_composite_17|float|ACT '17|ACT Composite Score, 2017|
+|sat_partic_18|float|SAT '18|% of students participating in the SAT in 2018|
+|sat_read_write_18|float|SAT '18|SAT Reading and Writing Score, 2018|
+|sat_math_18|float|SAT '18|SAT Math Score, 2018|
+|sat_total_18|float|SAT '18|SAT Total Score, 2018|
+|act_partic_18|float|ACT '18|% of students participating in the ACT in 2018|
+|act_composite_18|float|ACT '18|ACT Composite Score, 2018|
+|poverty|float|Census Poverty|% of people living in poverty, 2017-2018 average|
+|total_partic_17|float|Generated Feature|Sum of sat_partic_17 and act_partic_17|
+|total_partic_18|float|Generated Feature|Sum of sat_partic_18 and act_partic_18|
+|poverty_above_median|bool|Generated Feature|True if poverty index is below national median|
