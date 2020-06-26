@@ -33,7 +33,7 @@ Finally, we created visualizations. These were split into two parts:
     - Histograms of our columns allowed us to explore the internal distributions of each variable
     - Boxplots of all columns further visualized the spread of each variable
     - Scatterplots began relating specific variables to each other in tangible patterns
-    - Finally, combinations of masks and scatterplots allowed us to isolate features which previous analysis had shown were confounding the relationship between poverty and test scores.
+- Second, combinations of masks and scatterplots allowed us to isolate features which previous analysis had shown were confounding the relationship between poverty and test scores.
     - We then examine Ohio, the only state which had above-average test scores in the presence of high poverty and high participation rates for the test. By going deeper into the 
    
 We conclude that there is a meaningful relationship between state poverty levels and average SAT and ACT scores, and make several recommendations to address this effect.
